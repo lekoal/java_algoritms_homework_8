@@ -1,5 +1,11 @@
-package ru.geekbrains.algoritms.homework_8;
+/* Алгоритмы и структуры данных на Java
+Практическое задание к лекции № 8
+Кононов Леонид Александрович
+Согласно заданию, в программе реализовано:
+1. Реализован метод удаления в ChainingHashMap
+*/
 
+package ru.geekbrains.algoritms.homework_8;
 
 import java.util.Random;
 
@@ -19,5 +25,21 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             map.put(random.nextInt(100), " ");
         }
+
+        map.put(12, "must be deleted");
+        map.put(22, "must be deleted");
+        map.put(47, "must be deleted");
+        System.out.println(map);
+
+        map.delete(12);
+        System.out.println(map);
+
+        map.delete(22);
+        System.out.println(map);
+
+        map.delete(47);
+        System.out.println(map);
+
+        map.delete(100); // Попытка удаления несуществующего ключа
     }
 }

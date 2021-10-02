@@ -81,6 +81,13 @@ public class ChainingHashMap<K, V> {
         return null;
     }
 
+    public void delete(K key) { // Метод удаления значения по ключу
+        checkKeyNotNull(key);
+        int i = hash(key);
+        if (get(key) == null) System.out.println("key " + key + " not found"); // Проверка на существование ключа
+        else st[i].removeIf(node -> node.key.equals(key));
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
