@@ -1,5 +1,11 @@
-package ru.geekbrains.algoritms.homework_8;
+/* Алгоритмы и структуры данных на Java
+Практическое задание к лекции № 8
+Кононов Леонид Александрович
+Согласно заданию, в программе реализовано:
+1. Реализован метод удаления в ChainingHashMap
+*/
 
+package ru.geekbrains.algoritms.homework_8;
 
 import java.util.Random;
 
