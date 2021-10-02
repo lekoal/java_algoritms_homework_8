@@ -85,7 +85,10 @@ public class ChainingHashMap<K, V> {
         checkKeyNotNull(key);
         int i = hash(key);
         if (get(key) == null) System.out.println("key " + key + " not found"); // Проверка на существование ключа
-        else st[i].removeIf(node -> node.key.equals(key));
+        else {
+            st[i].removeIf(node -> node.key.equals(key));
+            size--;
+        }
     }
 
     @Override
