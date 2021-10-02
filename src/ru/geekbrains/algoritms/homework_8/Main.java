@@ -19,5 +19,21 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             map.put(random.nextInt(100), " ");
         }
+
+        map.put(12, "must be deleted");
+        map.put(22, "must be deleted");
+        map.put(47, "must be deleted");
+        System.out.println(map);
+
+        map.delete(12);
+        System.out.println(map);
+
+        map.delete(22);
+        System.out.println(map);
+
+        map.delete(47);
+        System.out.println(map);
+
+        map.delete(100); // Попытка удаления несуществующего ключа
     }
 }
